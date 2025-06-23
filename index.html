@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grand Vista Hotel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Grand Vista Hotel</h1>
+    <p>Luxury & Comfort at its Best</p>
+  </header>
+
+  <nav>
+    <a href="#rooms">Rooms</a>
+    <a href="#" id="bookingLink">Bookings</a>
+    <a href="#booking">Book Now</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Welcome to Paradise</h1>
+  </section>
+
+  <section id="rooms" class="rooms">
+    <h2>Our Rooms</h2>
+    <div class="room-card">
+      <div class="room">
+        <img src="https://images.pexels.com/photos/27604116/pexels-photo-27604116/free-photo-of-dania-city-villa-in-sulaymaniyah-city.png?auto=compress&cs=tinysrgb&w=600" alt="Deluxe Room" />
+        <div class="room-details">
+          <h3>Deluxe Room</h3>
+          <p>$150 per night</p>
+        </div>
+      </div>
+      <div class="room">
+        <img src="https://hotelgoldengrand.com/images/media/170814194446.3.jpg" alt="Executive Suite" />
+        <div class="room-details">
+          <h3>Executive Suite</h3>
+          <p>$250 per night</p>
+        </div>
+      </div>
+      <div class="room">
+        <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*6Fq3H1zz9R5fSd55J7-G7w.jpeg" alt="Standard Room" />
+        <div class="room-details">
+          <h3>Standard Room</h3>
+          <p>$100 per night</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="booking">
+    <h2>Book a Room</h2>
+    <form id="bookingForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email Address" required />
+
+      <select id="roomType" required>
+        <option value="">Select Room Type</option>
+        <option value="Standard Room">Standard Room</option>
+        <option value="Deluxe Room">Deluxe Room</option>
+        <option value="Executive Suite">Executive Suite</option>
+      </select>
+
+      <div id="roomNumberContainer" style="display: none;">
+        <select id="roomNumber" required>
+          <option value="">Select Room Number</option>
+        </select>
+      </div>
+
+      <input type="date" id="checkin" required />
+      <input type="date" id="checkout" required />
+
+      <select id="paymentStatus" required>
+        <option value="">Payment Status</option>
+        <option value="Paid">Paid</option>
+        <option value="Not Paid">Not Paid</option>
+      </select>
+
+      <div id="amountContainer">
+        <input type="number" id="amountPaid" placeholder="Amount Paid (₹)" min="0" required />
+      </div>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <div id="notification" class="notification">✅ Booking confirmed!</div>
+
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Booking Summary</h2>
+      <div id="bookingList"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Grand Vista Hotel | Contact: info@grandvista.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
