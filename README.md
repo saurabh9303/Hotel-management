@@ -1,2 +1,2 @@
-# hotel-management
+# Hotel-management
 Hotel management
